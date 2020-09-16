@@ -12,7 +12,7 @@ import { ToastService } from './../../services/toast.service';
 })
 export class LoginPage implements OnInit {
   postData = {
-    email: '',
+    email : '',
     password: ''
   };
 
@@ -39,9 +39,9 @@ export class LoginPage implements OnInit {
 
   loginAction() {
     if (this.validateInputs()) {
-     console.log("Debug data : ", this.postData)
       this.authService.login(this.postData).subscribe(
         (res: any) => {
+          console.log("result", res)
           if (parseInt(res.result.code) == 0)  {
             // Storing the User data.
             this.storageService
@@ -52,7 +52,7 @@ export class LoginPage implements OnInit {
           } else {
             this.toastService.presentToast('Incorrect username and password.');
           }
-          // console.log(JSON.stringify(res))
+          console.log(JSON.stringify(res))
         },
         (error: any) => {
           this.toastService.presentToast('Network Issue.');

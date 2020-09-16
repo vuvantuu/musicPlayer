@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Media } from '@ionic-native/media/ngx';
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  constructor( private media: Media) { }
 
   ngOnInit() {
   }

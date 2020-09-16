@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeGuard } from '../guards/home.guard';
+import { MenuPageModule } from '../pages/menu/menu.module';
+import { NotificationsPageModule } from '../pages/notifications/notifications.module';
+import { SettingsPageModule } from '../pages/settings/settings.module';
 import { UserDataResolver } from '../resolvers/user-data.resolver';
 import { HomePage } from './home.page';
 

@@ -1,3 +1,21 @@
-<ion-content>
-  <router-outlet></router-outlet>
-</ion-content>
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom" color="dark">
+    <ion-tab-button tab="menu">
+      <ion-icon name="md-musical-notes"></ion-icon>
+      <ion-label>Music</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="notifications" *ngIf= "true">
+      <ion-icon name="logo-youtube"></ion-icon>
+      <ion-label>Video</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="settings">
+      <ion-icon name="cog"></ion-icon>
+      <ion-label>Settings</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+</ion-tabs>
