@@ -1,6 +1,6 @@
 {
   "appId": "jp.rue.learnN5",
-  "appName": "jp.rue.learnN5",
+  "appName": "learnN5",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www"
