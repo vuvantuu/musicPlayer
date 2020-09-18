@@ -5,6 +5,7 @@ const { Storage } = Plugins;
   providedIn: 'root'
 })
 export class StorageService {
+  
   constructor() {}
 
   // Store the value

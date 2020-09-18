@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthConstants } from '../../config/auth-constants';
+import { AuthConstants, AuthType } from '../../config/auth-constants';
 import { AuthService } from './../../services/auth.service';
 import { StorageService } from './../../services/storage.service';
 import { ToastService } from './../../services/toast.service';
@@ -49,6 +49,8 @@ export class LoginPage implements OnInit {
               .then(res => {
                 this.router.navigate(['home']);
               });
+              this.authService.authType = res.result.data.type
+              console.log("wow", this.authService.authType)
           } else {
             this.toastService.presentToast('Incorrect username and password.');
           }

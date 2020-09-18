@@ -6,7 +6,8 @@
       <ion-label>Music</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="notifications" *ngIf= "true">
+    <ion-tab-button tab="notifications" >
+      <!-- *ngIf='this.authService.authType == 1' > -->
       <ion-icon name="logo-youtube"></ion-icon>
       <ion-label>Video</ion-label>
     </ion-tab-button>

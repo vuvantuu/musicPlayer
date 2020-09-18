@@ -24,4 +24,5 @@ describe('MenuPage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });

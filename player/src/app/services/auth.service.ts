@@ -10,7 +10,7 @@ import { StorageService } from './storage.service';
 })
 export class AuthService {
   userData$ = new BehaviorSubject<any>([]);
-
+  authType = 0;
   constructor(
     private httpService: HttpService,
     private storageService: StorageService,

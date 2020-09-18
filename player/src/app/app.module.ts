@@ -7,6 +7,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media/ngx'; 
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 
 import { Media } from '@ionic-native/media/ngx';
 
@@ -24,7 +26,8 @@ import { Media } from '@ionic-native/media/ngx';
     SplashScreen,
     Media,
     HttpClientModule,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    StreamingMedia, YoutubeVideoPlayer
   ],
   bootstrap: [AppComponent]
 })
