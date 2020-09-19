@@ -1,8 +1,12 @@
 #ProfilePic{
     padding:0 45%;
     width: 100%;
+    font-size: 30px;
 }
-#thumbnail{
-    
-    font-size: 100px;
-}
+
+.vertical-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }

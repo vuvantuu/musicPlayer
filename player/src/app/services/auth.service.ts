@@ -33,7 +33,7 @@ export class AuthService {
 
   logout() {
     this.storageService.clear();
-    // this.userData$.next('');
+    this.userData$.next('');
     this.router.navigate(['']);
   }
 }

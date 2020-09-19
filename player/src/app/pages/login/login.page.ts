@@ -45,10 +45,15 @@ export class LoginPage implements OnInit {
           if (parseInt(res.result.code) == 0)  {
             // Storing the User data.
             this.storageService
-              .store(AuthConstants.AUTH, res.result.data.token)
+              .store(AuthConstants.USERINFO, res.result.data)
               .then(res => {
                 this.router.navigate(['home']);
               });
+            // this.storageService
+            //   .store(AuthConstants.AUTH, res.result.data.token)
+            //   .then(res => {
+            //     this.router.navigate(['home']);
+            //   });
               this.authService.authType = res.result.data.type
               console.log("wow", this.authService.authType)
           } else {
