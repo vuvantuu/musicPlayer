@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Media } from '@ionic-native/media/ngx';
+import { AuthConstants } from '../config/auth-constants';
+import { StorageService } from '../services/storage.service';
 import { AuthService } from './../services/auth.service';
 @Component({
   selector: 'app-home',
@@ -8,9 +10,12 @@ import { AuthService } from './../services/auth.service';
 })
 export class HomePage implements OnInit {
 
-  constructor(  private authService: AuthService, private media: Media) { }
+  constructor( private storageService: StorageService,  private authService: AuthService, private media: Media) { }
 
   ngOnInit() {
+    this.check();
   }
-
+  async check(){
+    let user = await this.storageService.get(AuthConstants.USERINFO);
+  }
 }

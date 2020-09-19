@@ -14,6 +14,7 @@ import { Media } from '@ionic-native/media/ngx';
 import { File } from '@ionic-native/File/ngx';
 import { IonicStorageModule } from '@ionic/storage';
 import { FilePath } from '@ionic-native/file-path/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

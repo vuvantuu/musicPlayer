@@ -64,7 +64,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/home/menu',
+        redirectTo: '/home/settings',
         pathMatch: 'full'
       }
     ]
